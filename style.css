@@ -1,0 +1,172 @@
+:root {
+    --color-blue: hsl(195, 91%, 25%);
+    --color-blue-clear: hsl(195, 46%, 40%);
+    --color-text-white: hsl(0, 0%, 100%);
+    --color-input-white: hsla(0, 0%, 100%, 0.200);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    font-family: "Mulish", sans-serif;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--color-blue);
+    padding: 1rem;
+    box-sizing: border-box;
+    grid-area: header;
+}
+
+#icone {
+    width: 4rem;
+}
+
+#pesquisar {
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 66%; 
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    background-color: var(--color-input-white);
+    color: var(--color-text-white);
+    border-radius: 4px;
+}
+
+#pesquisar::placeholder{
+    color: var(--color-text-white);
+}
+
+#person {
+    width: 4.2rem;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+main {
+    font-size: 1.6rem;
+    margin-bottom: 3.4rem;
+    grid-area: main;
+}
+
+main h1 {
+    font-size: 2.4rem;
+}
+
+#astrounauta {
+    width: 100%;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+#content {
+    max-width: 382px;
+    margin: 0 auto 3.4rem;
+}
+
+#title-opinion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 3.1rem;
+}
+
+#title-opinion div {
+    display: flex;
+    gap: 1.2rem;
+}
+
+#title-opinion img {
+    width: 4rem;
+    background-color: var(--color-blue);
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+section {
+    max-width: 382px;
+    margin: 0 auto 3.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    grid-area: section;
+}
+
+section h2 {
+    font-size: 2.4rem;
+}
+
+.outros {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.outros img {
+    width: 15.1rem;
+    border-radius: 5px;
+}
+
+.outros div {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.outros div h3 {
+    font-size: 1.8rem;
+}
+
+footer {
+    color: var(--color-text-white);
+    background-color: var(--color-blue);
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 3rem;
+    grid-area: footer;
+    position: relative;
+    bottom: 0;
+}
+
+@media (min-width: 900px) {
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+
+        grid-template-areas: "header header"
+                             "main section"
+                             "main section"
+                             "footer footer";
+
+        column-gap: 3.4rem;
+    }
+
+    header {
+        margin-bottom: 4.4rem;
+    }
+
+    main {
+        max-width: 500px;
+        margin: 0 0 0 auto;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    section {
+        max-width: 400px;
+        margin: 0 auto 0 0;
+    }
+}
